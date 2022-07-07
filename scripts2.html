@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./css/scripts2.css">
+  <title>Scripts</title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon.png">
+</head>
+
+<body>
+  <main>
+    <!--Navegação entre scripts-->
+    <div class="container">
+      <div class="row tabs">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a id="ape" onclick="mudarpe()" class="nav-link dise active" aria-current="page" href="#">Padrão
+              e-mail</a>
+          </li>
+          <li class="nav-item">
+            <a id="apm" onclick="mudarpm()" class="nav-link dise" href="#">Padrão manutenção</a>
+          </li>
+          <li class="nav-item">
+            <a id="aco" onclick="mudarco()" class="nav-link dise" href="#">Comandos OLT</a>
+          </li>
+          <li class="nav-item">
+            <a id="avpl" onclick="mudarvpl()" class="nav-link dise vpld" href="#">Verificar posição livre</a>
+          </li>
+      </div>
+      <!--Padrão e-mail-->
+      <div id="pe" class="row adjust pe">
+        <div class="col conteudo">
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">BASE</label>
+            <select class="form-select" id="inputGroupSelect01">
+              <option selected>Escolher base</option>
+              <option value="OT">OT</option>
+              <option value="VOU">VOU</option>
+              <option value="ATELE">ATELE</option>
+            </select>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">CLIENTE</span>
+            <input id="cliente" type="text" class="form-control" placeholder="Nome e código" aria-label="Username"
+              aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">PROTOCOLO</span>
+            <input id="protocolo" type="text" class="form-control" placeholder="202200000000000" aria-label="Username"
+              aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">ENDEREÇO</span>
+            <input id="endereco" type="text" class="form-control" placeholder="Endereço" aria-label="Username"
+              aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">SLA</label>
+            <select class="form-select" id="inputGroupSelect02">
+              <option value="48h">48h</option>
+              <option value="24h" selected>24h</option>
+              <option value="12h">12h</option>
+              <option value="6h">6h</option>
+              <option value="3h">3h</option>
+            </select>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">RESPONSÁVEL</span>
+            <input id="nome" type="text" class="form-control" placeholder="Nome" aria-label="Username"
+              aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">TELEFONE</span>
+            <input id="telefone" type="text" class="form-control" placeholder="(xx) xxxxx-xxxx" aria-label="Username"
+              aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3 btngerar d-grid gap-2">
+            <button onclick="gerarScriptpe()" type="button" class="btn btn-dark btn-block ">GERAR SCRIPT</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <textarea id="scriptarea" class="form-control textareaemail" id="exampleFormControlTextarea1"
+              rows="17"></textarea>
+          </div>
+        </div>
+      </div>
+      <!--Padrão manutenção-->
+      <div id="pm" class="row adjust pm">
+        <div class="col conteudo">
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect03">BASE</label>
+            <select class="form-select" id="inputGroupSelect03">
+              <option selected>Escolher base</option>
+              <option value="OT">OT</option>
+              <option value="VOU">VOU</option>
+              <option value="ATELE">ATELE</option>
+            </select>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">PROTOCOLO</span>
+            <input id="protocolo2" type="text" class="form-control" placeholder="202200000000000" aria-label="Username"
+              aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">MOTIVO</span>
+            <textarea id="motivo" class="form-control" aria-label="With textarea"></textarea>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">CDA</span>
+            <input id="cda1" type="text" class="form-control" placeholder="PON, CDA e OLT" aria-label="Username"
+              aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">LOCALIZAÇÃO</span>
+            <input id="local1" type="text" class="form-control" placeholder="xx.xxxxxx,xx.xxxxxx" aria-label="Username"
+              aria-describedby="basic-addon1">
+          </div>
+          <div id="addCda">
+          </div>
+          <div class="addCda">
+            <button class="btnaddcda" onclick="excCda()">
+              <img class="excCdaImg" id="excCdaImg" width="15" src="./img/54601.png" alt="">
+              <strong>Excluir CDA</strong>
+            </button>
+            <button class="btnaddcda" onclick="addcda()">
+              <img id="addCdaImg" width="35" src="./img/Tab_plus.svg.png" alt="">
+              <strong>Adicionar CDA</strong>
+            </button>
+          </div>
+          <div class="form-check droptest">
+            <input class="form-check-input" type="radio" name="exampleRadios" value="option" id="exampleRadios1">
+            <label class="form-check-label" for="exampleRadios1">
+              Verificado rompimento de fibra
+            </label>
+          </div>
+          <div class="form-check droptest">
+            <input class="form-check-input" type="radio" name="exampleRadios" value="option" id="exampleRadios2">
+            <label class="form-check-label" for="exampleRadios2">
+              Sem rompimento de fibra
+            </label>
+          </div>
+          <div class="input-group mb-3 btngerar d-grid gap-2">
+            <button onclick="gerarScriptpm()" type="button" class="btn btn-dark btn-block ">GERAR SCRIPT</button>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <textarea id="scriptarea2" class="form-control textareaemail" id="exampleFormControlTextarea1"
+              rows="18"></textarea>
+          </div>
+        </div>
+      </div>
+      <!--Comandos OLT-->
+      <div id="co" class="row adjust co">
+        <div id="codigos1" class="col conteudo">
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect05">OLT</label>
+            <select class="form-select" id="inputGroupSelect05">
+              <option selected>Choose...</option>
+              <option value="1">DATACOM</option>
+              <option value="2">ZTE</option>
+              <option value="3">INTELBRAS I</option>
+              <option value="4">INTELBRAS G</option>
+            </select>
+          </div>
+        </div>
+        <div id="codigos2" class="col conteudo">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">PON</span>
+            <input id="pon" type="text" class="form-control" placeholder="x/x/x" aria-label="Username"
+              aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div id="codigos3" class="col conteudo">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">POSIÇÃO</span>
+            <input id="posicao" type="text" class="form-control" placeholder="x" aria-label="Username"
+              aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div id="diferente">
+        </div>
+      </div>
+      <!--Verificar posição livre-->
+      <div id="vpl" class="row adjust vpl" action="">
+        <div class="col conteudo">
+          <div id="apndc" class="row firstvpl">
+            <div id="" class="col conteudo3">
+              <div class="input-group mb-3 toTest">
+                <span class="input-group-text" id="basic-addon1">PON</span>
+                <input onkeyup="attComando()" id="phpon" type="text" class="phpon form-control" placeholder="x/x/x"
+                  aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+            </div>
+            <div id="" class="col conteudo3">
+              <div id="comando" class="d-grid gap-2">
+                <select id="slced" onchange="attComando()" class="form-select vp slcolt"
+                  aria-label="Default select example">
+                  <option class="optp" selected value="zte">ZTE</option>
+                  <option class="optp" value="datacom">DATACOM</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 apndc">
+            <textarea class="form-control vplt2" id="ldo" rows="15"></textarea>
+          </div>
+          <div class="d-grid gap-2">
+            <button onclick="gerarScriptvpl()" class="btn btn-dark vp" type="button">GERAR</button>
+          </div>
+          <div class="col noonuslista" id="noonus">
+          </div>
+        </div>
+        <div class="col conteudo3">
+          <div class="row">
+            <div class="col conteudo2">
+              <div id="" class="d-grid gap-2">
+                <button class="btn btn-dark vp" type="button">POSIÇÕES LIVRES</button>
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control vplt" id="vpl2" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="col conteudo2">
+              <div id="" class="d-grid gap-2">
+                <button class="btn btn-dark vp" type="button">QUANTIDADE DE POSIÇÕES</button>
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control vplq" id="vpl3" rows="4"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col conteudo2">
+              <div class="d-grid gap-2">
+                <button class="btn btn-dark vp" type="button">DETAIL DAS ONUS DOWN</button>
+              </div>
+              <div id="" class="mb-3">
+                <textarea class="form-control vplt3" id="ddod" rows="9"></textarea>
+              </div>
+              <div class="d-grid gap-2">
+                <button onclick="copiarTexto()" class="btn btn-dark vp" type="button">COPIAR</button>
+              </div>
+            </div>
+            <div class="col conteudo2">
+              <div class="d-grid gap-2">
+                <button class="btn btn-dark vp" type="button">DETAIL DE TODAS AS ONUS</button>
+              </div>
+              <div id="" class="mb-3">
+                <textarea class="form-control vplt3" id="ddod2" rows="9"></textarea>
+              </div>
+              <div class="d-grid gap-2">
+                <button onclick="copiarTexto2()" class="btn btn-dark vp" type="button">COPIAR</button>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <textarea spellcheck="false" class="form-control vplt5" id="vpl5" aria-label="With textarea"
+              rows="17"></textarea>
+          </div>
+          <div class="d-grid gap-2">
+            <button onclick="copiarTextotr()" id="copiartr" class="btn btn-dark vp copiartr"
+              type="button">COPIAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script defer type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="./js/scripts2.js"></script>
+  <script defer src="./js/codigo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+body {
+    background-image: url("../img/pixel-jeff-clipa-s.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.container{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.tabs{
+    border-radius: 0.15em;
+    background-color: rgba(248, 248, 248, 0.849);
+    margin-top: 2em;
+}
+
+.dise{
+    color: rgb(70, 70, 70);
+}
+.dise:hover{
+    color: rgb(70, 70, 70);
+}
+.dise:focus{
+    color: rgb(70, 70, 70);
+}
+
+.nav-item:hover{
+    background-color: rgba(0, 0, 0, 0.048);
+}
+
+.conteudo{
+    margin-top: 1em;
+    max-width: 20em;
+}
+
+.conteudo2{
+    margin-top: 1em;
+}
+
+.adjust{
+    background-color: white;
+    border: solid rgb(230, 230, 230) 0.1em;
+    border-top: 0;
+
+}
+
+.form-group{
+    height: 100%;
+}
+
+.textareaemail{
+    box-sizing: border-box;
+    margin-top: 1em;
+}
+
+.pe{
+    display: flex;
+    transition: 1s;
+}
+
+.pm{
+    display: none;
+
+}
+
+.co{
+    display: none;
+    transition: 1s;
+
+}
+
+.vpl{
+    display: none;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+}
+
+.esconder{
+    display: none;
+}
+
+.selecionar{
+    display: none;
+
+}
+
+.editar{
+    margin: 0.15em;
+    display: none;
+}
+
+.btn2gerar{
+    display: none;
+}
+
+.divisoria{
+    border-bottom: solid rgb(49, 49, 49) 0.20em;
+}
+
+#dif2{
+    font-weight: bold;
+}
+
+#antigo2{
+    background-color:aliceblue ;
+}
+
+.droptest{
+    margin-left: 0.1em;
+    margin-bottom: 0.6em;
+}
+
+.bs{
+    color: red;
+}
+
+.bs:hover{
+    color: red;
+}
+
+.bs:focus{
+    color: red;
+}
+
+.vp{
+    margin-bottom: 0.6em;
+}
+
+.vplt{
+    font-weight: bold;
+    font-size: 1em;
+    vertical-align: middle;
+}
+
+.vplq{
+    font-size: 1.25em;
+}
+
+.vplt2{
+    font-size: 1.03em;
+}
+
+.vplt3{
+    font-size: 0.98em;
+}
+
+.vplt5{
+    display: none;
+    height: 100%;
+    margin-top: 0.40em;
+}
+
+.copiartr{
+    display: none;
+}
+
+.optp{
+    text-align: center;
+}
+
+.toTest{
+    white-space: nowrap;
+    flex-wrap: nowrap;
+}
+
+.phpon{
+    text-align: center;
+}
+
+.phpon::-webkit-input-placeholder{
+    text-align: center;
+}
+
+.phpon::-moz-placeholder{
+    text-align: center;
+}
+
+.pcmd{
+    font-weight: bold;
+    white-space: pre-line;
+    align-items: center;
+}
+
+.commandVpl{
+    display: flex;
+    align-items: center;
+    height: 3rem;
+}
+
+.noonus{
+    margin-right: 1em;
+    margin-left: 0.3em;
+}
+
+.noonuslista{
+    padding: 0.5em;
+}
+
+.tobldonu{
+    font-weight: bold;
+    display: none;
+}
+
+.plusbtn{
+    width: 1.2em;
+    margin-right: 0.42em;
+}
+
+.plusbtn2{
+    width: 2.8em;
+    height: 2em;
+}
+
+.cont{
+    margin-right: 0.8em;
+    padding: 0;
+    width: 250px;
+}
+
+.addcda{
+    border-radius: 0.30em;
+    display: flex;
+    margin-bottom: 0.6em;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    height: 3em;
+}
+
+.addcda:hover{
+    position: static;
+    transition: 2s;
+    padding: 0.10em;
+}
+
+.txtbtn{
+    color: rgb(41, 41, 41);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.txtbtn:hover{
+    transition: 1s;
+    color: black;
+}
+
+.addCda{
+    white-space: nowrap;
+    text-align: center;
+}
+
+.btnaddcda{
+    border: 0;
+    background-color: transparent;
+    text-shadow: 0 0 40px black;
+}
+
+.excCdaImg{
+    margin-right: 0.5em;
+}

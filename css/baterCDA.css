@@ -1,0 +1,115 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+body{
+    background-image: url(../img/pixel-jeff-clipa-s.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.container{
+    background-color: rgba(247, 247, 247, 0.856);
+    border: solid rgb(49, 49, 49) 0.20em;
+    border-radius: 0.30em;
+    margin-top: 2em;
+}
+
+.col{
+    border-top: solid rgb(49, 49, 49) 0.20em;
+
+}
+
+.naoEsconder{
+    border-top: 0;
+}
+
+.mb-3 label {
+    margin-top: 10px;
+}
+
+.input-group label {
+    margin-top: 0;
+}
+
+.input-group{
+    margin-top: 0.9em;
+}
+
+.esconder{
+    display: none;
+}
+
+.btn-dark{
+    margin: 0.15em;
+    display: none;
+}
+
+.btn2{
+    margin-bottom: 1em;
+}
+
+.diferente{
+    padding: 0.7em;
+}
+
+.divisoria{
+    border-bottom: solid rgb(49, 49, 49) 0.20em;
+}
+
+.editar{
+    margin: 1em;
+}
+
+#igual{
+    font-weight: bold;
+    text-align: center;
+}
+
+#oldg{
+    background-color: rgba(166, 245, 48, 0.582);
+}
+
+#newg{
+    background-color: rgba(166, 245, 48, 0.582) ;
+}
+
+#oldg2{
+    background-color: rgba(225, 65, 65, 0.63);
+}
+
+#newg2{
+    background-color: rgba(225, 65, 65, 0.63);
+}
+
+.desc{
+    margin: 0;
+    font-weight: bold;
+}
+
+#antigo{
+    margin: 0;
+    margin-bottom: 0.30em;
+}
+
+#novo{
+    margin: 0;
+    margin-bottom: 0.30em;
+}
+
+#mac{
+    margin: 0;
+    margin-bottom: 0.30em;
+}
+
+#mac2{
+    margin: 0;
+    margin-bottom: 0.15em;
+}
